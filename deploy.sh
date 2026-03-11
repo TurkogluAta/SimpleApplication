@@ -13,5 +13,9 @@ npm install
 echo "$PRIVATE_KEY" | base64 -d > privatekey.pem
 echo "$SERVER" | base64 -d > server.crt
 
+# Redirect ports 80 and 443 to 8443 where the app listens
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8443
+
 # Launch the app using pm2 so it restarts automatically on crash
 pm2 start ./bin/www --name simpleapp
