@@ -9,9 +9,9 @@ cd SimpleApplication/
 # Install all required npm packages
 npm install
 
-# Write environment variables to files for the app to use
-echo "$PRIVATE_KEY" > privatekey.pem
-echo "$SERVER" > server.crt
+# Decode base64-encoded secrets from CI environment variables into files
+echo "$PRIVATE_KEY" | base64 -d > privatekey.pem
+echo "$SERVER" | base64 -d > server.crt
 
 # Launch the app using pm2 so it restarts automatically on crash
 pm2 start ./bin/www --name simpleapp
