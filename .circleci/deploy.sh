@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+sudo apt update && sudo apt install nodejs npm
+# Install pm2 globally to manage and keep the app running in the background
+sudo npm install -g pm2
+# Stop the mathapp process if it is already running
+pm2 stop mathapp
+# Navigate into the cloned application directory
+cd SimpleApplication/
+# Install all required npm packages
+npm install
+
+# Write environment variables to files for the app to use
+printf "%s" "$PRIVATE_KEY" > privatekey.pem
+printf "%s" "$SERVER" > server.crt
+
+# Launch the app using pm2 so it restarts automatically on crash
+pm2 start ./bin/www --name mathapp
