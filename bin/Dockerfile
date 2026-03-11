@@ -5,7 +5,7 @@ ENV NODE_ENV=production
 
 COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm install
+RUN sudo npm install
 
 COPY . .
 
