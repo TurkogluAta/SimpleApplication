@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-03-11T17:28:48" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="App" timestamp="2026-03-11T17:28:48" tests="2" file="/Users/ataturkoglu/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/NCI/Computing/Year 4/Semester 4.2/DevOpsSec/CA/SimpleApplication/test/test.js" time="0.0000" failures="0">
+    <testcase name="App should be defined" time="0.0000" classname="should be defined">
+    </testcase>
+    <testcase name="App should have a handler function" time="0.0000" classname="should have a handler function">
+    </testcase>
+  </testsuite>
+  <testsuite name="Index Route" timestamp="2026-03-11T17:28:48" tests="1" file="/Users/ataturkoglu/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal/NCI/Computing/Year 4/Semester 4.2/DevOpsSec/CA/SimpleApplication/test/test.js" time="0.0000" failures="0">
+    <testcase name="Index Route should render with correct title" time="0.0000" classname="should render with correct title">
+    </testcase>
+  </testsuite>
+</testsuites>
