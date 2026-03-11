@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM circleci/node:latest
 
+USER root
+
 WORKDIR /app
 
 ENV NODE_ENV=production
