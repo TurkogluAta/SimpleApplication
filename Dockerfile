@@ -1,7 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM circleci/node:latest
-
-USER root
+FROM node:18-alpine
 
 WORKDIR /app
 
