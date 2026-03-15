@@ -2,15 +2,70 @@
 <html>
   <head>
     <title><%= title %></title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f7f8fa;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Centered card */
+      .card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 36px 40px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        width: 320px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+        color: #1a202c;
+        margin-bottom: 6px;
+      }
+
+      /* Green pipeline badge */
+      .badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #276749;
+        background: #c6f6d5;
+        padding: 3px 10px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+      }
+
+      ul {
+        list-style: none;
+        border-top: 1px solid #eee;
+      }
+
+      ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        color: #4a5568;
+        font-size: 0.95rem;
+      }
+    </style>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <ul>
-      <li>Coffee</li>
-      <li>Tea</li>
-      <li>Milk</li>
-      <li>add more...</li>
-      <li>Ata Test</li>
-    </ul>
+    <div class="card">
+      <h1><%= title %></h1>
+
+      <!-- CI/CD pipeline status badge -->
+      <span class="badge">✓ Deployed via CI/CD</span>
+
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+    </div>
   </body>
 </html>
